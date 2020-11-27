@@ -21,6 +21,33 @@
     /* border-style: groove; */
 }
 
+.form_data {
+    font-family: 'Poppins';
+}
+
+.post_title{
+    font-family: 'Poppins',sans-serif;
+    text-align: center;
+    font-size: 3em;
+}
+
+.post_date {
+    /* font-family: 'Poppins',sans-serif; */
+    text-align: center;
+}
+
+.postcontent {
+    font-family: 'Poppins';
+}
+
+.comment {
+    margin-left: 80%;
+}
+
+.publish {
+    margin-left: 45%;
+}
+
 /* COLOR CHANGER BELOW --> Hue Loaders (CodePen) */
 .loader {
     filter:hue-rotate(0deg);

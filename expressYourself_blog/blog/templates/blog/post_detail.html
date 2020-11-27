@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 
 {% block title %}
-    Post Detail Page
+    {{ post.title }}
 {% endblock title %}
 
 {% block content %}
@@ -9,11 +9,11 @@
         <h1 class="post_title">{{ post.title }}</h1>
     </div>
     {% if post.published_date %}
-        <div class="date">
+        <div class="post_date">
             Published On: {{ post.published_date }}
         </div>
     {% else %}
-        <a class="btn btn-default" href="{% url 'post_publish' pk=post.pk %}">Publish</a>
+        <a class="btn btn-primary publish" href="{% url 'post_publish' pk=post.pk %}">Publish</a>
     {% endif %}
 
     <p class="postcontent">

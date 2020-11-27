@@ -57,7 +57,7 @@ class PostDeleteView(LoginRequiredMixin, DeleteView):
 # it will all the posts which are not yet published i.e. their published_date = NULL
 class DraftListView(LoginRequiredMixin, ListView):
     login_url = '/login/'
-    redirect_field_name = 'blog/post_list.html'
+    template_name = 'post_draft_list.html'
 
     model = Post
 
