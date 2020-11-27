@@ -5,5 +5,14 @@
 {% endblock title %}
 
 {% block content %}
-    List of posts will be visible here.
+    <div class="centerstage">
+        <!-- default name is post_list i.e. name of model underscore list -->
+        {% for post in post_list %} 
+            <div class="post loader">
+                <h1><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h1>
+                <p>Published on: {{ post.published_date|date:"D M Y" }}</p>
+                <a href="{% url 'post_detail' pk=post.pk %}">Comments: {{ post.approve_comments.count }}</a>
+            </div>      
+        {% endfor %}
+    </div>
 {% endblock content %}

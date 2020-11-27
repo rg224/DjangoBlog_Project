@@ -51,6 +51,7 @@ class PostUpdateView(LoginRequiredMixin, UpdateView):
 
 class PostDeleteView(LoginRequiredMixin, DeleteView):
     model = Post
+    template_name = 'post_confirm_delete.html'
     success_url = reverse_lazy('post_list')
 
 # it will all the posts which are not yet published i.e. their published_date = NULL
@@ -75,7 +76,6 @@ def post_publish(request, pk):
 @login_required # a person has to be LoggedIn in order to comment
 def add_comment_to_post(request, pk):
     post = get_object_or_404(Post, pk=pk)
-    post.pub
 
     if request.method == 'POST':
         form = CommentForm(request.POST)

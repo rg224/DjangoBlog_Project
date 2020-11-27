@@ -10,6 +10,17 @@
     font-size: 1.3em;
 }
 
+/* to center whatever comes under this div with class centerstage */
+.centerstage {
+    margin-left: auto; 
+    margin-right: auto;
+}
+
+.post {
+    padding: 10px;
+    /* border-style: groove; */
+}
+
 /* COLOR CHANGER BELOW --> Hue Loaders (CodePen) */
 .loader {
     filter:hue-rotate(0deg);
